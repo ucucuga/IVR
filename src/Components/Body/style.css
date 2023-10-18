@@ -1,0 +1,66 @@
+.sword {
+    animation-name: sword;  
+    animation-duration: 1s;        
+    animation-iteration-count: 1;  
+    transform-origin: 0% 100%;       
+    display: inline-block;
+    color: #fdf7f7;
+    animation-fill-mode: forwards;
+
+  }
+  
+  @keyframes sword {
+    0% {
+        transform: translateY(0) rotate(0);
+      }
+      100% {
+        transform: translateY(-200px) rotate(180deg);
+      }
+  }
+
+.f{
+ font-size: small;
+ font-weight: 900;
+ width: 200px;
+ margin: 60px;
+ margin-bottom: 90px;
+ text-align: center;
+
+}
+.gif{
+    background-image: url(./gif_background.gif);
+    height: 140vh;
+}
+.experiment{
+  color: #131516;
+  background-color: #131516;
+  box-shadow: 2px 2px 15px 4px #D90368;
+  width: 250px;
+  height: 100px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center
+}
+
+.experiment[data-isOpen="true"] {
+  width: 250px;
+  height: 300px;
+  margin-left: auto;
+    margin-right: auto;
+}
+h1{
+text-align: center;
+justify-content: center;
+}
+
+.upButton{
+  position: absolute;
+  right: 10px;
+  bottom: 70px;
+  color: #fdf7f7;
+}
+.items{
+  margin: auto;
+  padding-left: 20%;
+
+}
