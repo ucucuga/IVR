@@ -5,10 +5,9 @@ import Bounce from 'react-reveal/Bounce';
 import Alert from '@mui/material/Alert';
 import Grid from '@mui/material/Grid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { GiPointySword } from "react-icons/gi";
+ import { GiPointySword } from "react-icons/gi";
 import "./style.css"
 import Avatar from '@mui/material/Avatar';
-import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import { motion } from "framer-motion"
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
@@ -46,23 +45,6 @@ const Body = ({ }) => {
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
 
-  const images = [
-    {
-      original: 'https://avatars.dzeninfra.ru/get-zen_doc/1722013/pub_5dfb64ce9515eef13079f27f_5dfb6ee9bc251400ac97e49a/scale_1200',
-    },
-    {
-      original: 'https://isu.ifmo.ru/pls/apex/f?p=2143:0:0:DWNLD_F:NO::FILE:89261A543994539EB594F823B278066B',
-    },
-    {
-      original: 'https://ctfnews.ru/uploads/photos/IMG_8507.jpg',
-    },
-    {
-      original: 'https://pp.userapi.com/c830309/v830309232/495c/N0GjSLCgMH0.jpg',
-    },
-    {
-      original: 'https://pp.userapi.com/c626520/v626520420/2fbd4/Uoset9FTHO8.jpg',
-    },
-  ];
 
   const [UserInput, setUserInput] = useState("")
   const handleClick = () => { settaskSolved2(!taskSolved2); };
@@ -136,7 +118,7 @@ const Body = ({ }) => {
           <Fade right>
             <SmallInfoBlock>
               <Text>
-                <p>Ну смотри, {UserInput}</p>
+                <p>Ну смотрите, {UserInput}</p>
                 <p>CTF — <span className="GreenText">Capture The Flag</span>, также известный под русифицированным вариантом — Захват флага, это игровая информационная безопасность, набирающая
                   большую популярность за последние годы. За основу взяты инструменты и приемы реальных безопасников, но на работе как правило нет таких <span className="GreenText">"уцуцуг"</span>, как в CTF.
                   И нет, {UserInput}, это не означает, что после нескольких занятий <span className="GreenText">ты сможешь взломать</span> бабушкин чайник или профиль Одноклассника. Вас познакомят с уязвимостями
@@ -272,12 +254,6 @@ const Body = ({ }) => {
             </Grid>
           </Fle>
         </Fade>
-
-        <ImageGallery items={images}
-          showPlayButton={false}
-          showFullscreenButton={false}
-          autoPlay={true}
-        />
       </ContainerBody>
       <BlackBlackTheme>
         <BlackTheme2 className="gif" id="info_point">

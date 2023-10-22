@@ -1,9 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {ContainerBody, Text, BigInfoBlock, BlackTheme, SmallInfoBlock, Meloch, Solved} from "./style.js"
-import Fade from 'react-reveal/Fade';
-import Bounce from 'react-reveal/Bounce';
-import { imageListItemBarClasses } from "@mui/material";
-import Alert from '@mui/material/Alert';
+import {ContainerBody, Text, BigInfoBlock, StyledLink} from "./style.js"
 import {Link} from 'react-router-dom';
 
 const Welcome = () =>{
@@ -34,14 +30,13 @@ const Welcome = () =>{
     return(
         <>
         <ContainerBody>
-           <a name ="welcome"></a>
            <h1>База знаний для CTF'еров</h1>
 
            <BigInfoBlock>
-           <Text><p>Этот сайт изачально был создан для учеников нашего курса на Stepik, 
+           <Text><p>Этот сайт изачально был создан для учеников нашего курса на <StyledLink><a href="https://stepik.org/course/132488/info">Stepik</a></StyledLink>, 
             но будет полезен к ознакомлению всем, кто когда-либо интересовался игровой информационной безопасностью. 
             Здесь собраны различные ссылки на ресурсы и другая полезная  информация.</p>
-            <p>Укажи, пожалуйста, как к тебе обращаться?</p></Text>
+            <p>Укажите, пожалуйста, как к вам обращаться?</p></Text>
             
 
             <input value={UserInput} onChange={handlerOnChangeInput}/>

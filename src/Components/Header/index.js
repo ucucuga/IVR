@@ -1,17 +1,11 @@
 import React, {useState, useEffect} from "react";
-import {ContainerHeader, StyledIcons, H2} from "./style.js"
+import {ContainerHeader,  H2} from "./style.js"
 import './style.css';
-import {
-    Routes,
-    Route, BrowserRouter,
-  } from 'react-router-dom';
 import Bounce from 'react-reveal/Bounce';
-import { bounce } from 'react-animations';
 import PublicIcon from '@mui/icons-material/Public';
 import AssistantPhotoIcon from '@mui/icons-material/AssistantPhoto';
 import InfoIcon from '@mui/icons-material/Info';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import { HashLink as Link } from 'react-router-hash-link';
 

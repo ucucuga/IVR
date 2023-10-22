@@ -7,45 +7,23 @@ import ChatIcon from '@mui/icons-material/Chat';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SchoolIcon from '@mui/icons-material/School';
 import { TypeAnimation } from 'react-type-animation';
-// import { HashLink as Link } from 'react-router-hash-link';
-import Grid from '@mui/material/Grid';
-import {useSound, stopSound} from 'use-sound';
+import {useSound} from 'use-sound';
 import rickroll from './never-gonna-give-u-up.mp3';
-import echo from './gay-echo.mp3';
-import fail from './spongebob-fail.mp3';
-import { stop } from 'use-sound';
-import {
-  Routes,
-  Route, BrowserRouter, Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [play, { sound, stop}] = useSound(rickroll);
-  const [play3] = useSound(fail);
 
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  const [play2, { mus, stopSound}] = useSound(echo);
-
-  const handleStopSound = () => {
-    stopSound(); // Остановка звука
-    play2();
-  };
+ 
   const handleSound = () => {
     stop();
     play();
   };
-  const handleSoundEcho = () => {
-    stop();
-    play2();
-  };
-  const handleSounFail = () => {
-    stop();
-    play3();
-  };
+
 
   return (
     <ContainerFooter >
@@ -70,10 +48,11 @@ const Footer = () => {
             sx={{ color: '#fdf7f7' }}
           />
           <BottomNavigationAction
-            onClick={handleSounFail}
             label="Оставить отзыв на курс" style={value === 2 ? { color: '#D90368' } : { color: '#fdf7f7' }}
             icon={<ChatIcon style={value === 2 ? { color: '#D90368' } : { color: '#fdf7f7' }} />}
             sx={{ color: '#fdf7f7' }}
+            component={Link}
+            to="https://t.me/stepik_ctf_bot"
           />
           <BottomNavigation>
             <TypeAnimation

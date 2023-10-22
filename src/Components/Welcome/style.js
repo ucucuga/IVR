@@ -16,3 +16,7 @@ export const BigInfoBlock = styled.div`
     margin-bottom: 150px;
     margin-left: 150px;
 `;
+export const StyledLink = styled.a`
+    text-decoration: none;
+    color: #16EB80;
+`;
