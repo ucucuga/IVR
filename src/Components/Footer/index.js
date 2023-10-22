@@ -7,14 +7,17 @@ import ChatIcon from '@mui/icons-material/Chat';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SchoolIcon from '@mui/icons-material/School';
 import { TypeAnimation } from 'react-type-animation';
-import { Link } from 'react-router-dom';
+// import { HashLink as Link } from 'react-router-hash-link';
 import Grid from '@mui/material/Grid';
 import {useSound, stopSound} from 'use-sound';
 import rickroll from './never-gonna-give-u-up.mp3';
 import echo from './gay-echo.mp3';
 import fail from './spongebob-fail.mp3';
 import { stop } from 'use-sound';
-
+import {
+  Routes,
+  Route, BrowserRouter, Link
+} from 'react-router-dom';
 
 const Footer = () => {
   const [play, { sound, stop}] = useSound(rickroll);
@@ -54,14 +57,14 @@ const Footer = () => {
           style={{ background: '#131516' }}
         >
           <BottomNavigationAction
-
-            onClick={handleSound}
             label="Stepik CTF" style={value === 0 ? { color: '#D90368' } : { color: '#fdf7f7' }}
             icon={<SchoolIcon style={value === 0 ? { color: '#D90368' } : { color: '#fdf7f7' }} />}
             sx={{ color: '#fdf7f7' }}
-          />
+            component={Link}
+            to="https://stepik.org/course/132488/info"
+          /> 
           <BottomNavigationAction
-            onClick={handleSoundEcho}
+            onClick={handleSound}
             label="Обратная связь" style={value === 1 ? { color: '#D90368' } : { color: '#fdf7f7' }}
             icon={<MailOutlineIcon style={value === 1 ? { color: '#D90368' } : { color: '#fdf7f7' }} />}
             sx={{ color: '#fdf7f7' }}
