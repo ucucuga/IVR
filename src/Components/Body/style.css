@@ -29,7 +29,7 @@
 }
 .gif{
     background-image: url(./gif_background.gif);
-    height: 140vh;
+    height: 180vh;
 }
 .experiment{
   color: #131516;
@@ -45,8 +45,7 @@
 .experiment[data-isOpen="true"] {
   width: 250px;
   height: 300px;
-  margin-left: auto;
-    margin-right: auto;
+  margin-top: auto;
 }
 h1{
 text-align: center;
